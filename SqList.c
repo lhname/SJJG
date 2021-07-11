@@ -31,7 +31,8 @@ int ListDelete(SqList *sq,int i,ElemType *e){//删除第i个元素，被删除的元素在e中
     if(i<1 || i>sq->Lenght)
         return 0;
     *e=sq->data[i-1];
-    for (int j = i-1; j < sq->Lenght-1; j++)
+    int j;
+    for (j = i-1; j < sq->Lenght-1; j++)
     {
         sq->data[j] = sq->data[j+1];
     }
